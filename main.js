@@ -3,6 +3,15 @@ eH1.textContent = "Olá mundo!";
 
 const eTabuleiro = criaTabuleiro();
 document.body.append(eTabuleiro);
+const disco1 = criaDisco("preto");
+eTabuleiro.append(disco1);
+
+function criaDisco(cor) {
+    const novoDisco = document.createElement("div");
+    novoDisco.classList.add("disco");
+    novoDisco.dataset.cor = cor;
+    return novoDisco;
+}
 
 function criaTabuleiro() {
     const eTabuleiro = document.createElement("div");
